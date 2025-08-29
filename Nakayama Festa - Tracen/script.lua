@@ -53,6 +53,34 @@ function events.entity_init()
     swinging_physics.swingOnBody(modelBody.tail1.tail2, 180, {-270,90, 0,0, -25,25}, modelBody.tail1, 1)
     swinging_physics.swingOnBody(modelBody.tail1.tail2.tail3, 180, {-90,90, 0,0, -50,50}, modelBody.tail1.tail2, 2)
 
-
     --Hairs Physics
+    -- direction: basically imagine it dangling from a stick thats pointing in this direction
+    --     0 means forward, 45 is 45 degree to the left, 90 is 90 degree to the left, and so on all the way around
+    -- limits: limit rotation for each axis, table layout {xLow, xHigh, yLow, yHigh, zLow, zHigh} (optional)
+    -- source: example script from manuel_2867
+    -- x: front and back(-) swing
+    -- y: left(-) and right, spin
+    -- z: left(-) and right, swing
+    modelHair = root.torso.Neck.Head.hair
+
+    -- front hair
+    swinging_physics.swingOnHead(modelHair.front_hair, 0, {0,45, -2.5,2.5, -2.5,2.5})
+    swinging_physics.swingOnHead(modelHair.hair_left, 90, {-2.5,2.5, 0,0, -10,0})
+    swinging_physics.swingOnHead(modelHair.hair_right, -90, {-2.5,2.5, 0,0, 0, 10})
+    swinging_physics.swingOnHead(modelHair.hair_left_front, 90, {-2.5,20, 0,0, -10,0})
+    swinging_physics.swingOnHead(modelHair.hair_right_front, -90, {-2.5,25, 0,0, 0, 10})
+
+    -- side hair
+    swinging_physics.swingOnHead(modelHair.hair_left_back, 90, {-15,15, -5,5, -5,5})
+    swinging_physics.swingOnHead(modelHair.hair_right_back, -90, {-15,15, -5,5, -5,5})
+
+    -- back hair
+    swinging_physics.swingOnHead(modelHair.back_hair, 180, {-45, 2.5, -5,5, -5,5})
+    swinging_physics.swingOnHead(modelHair.back_hair.back_hair_2, 180, {-30, 5, -2.5,2.5, -10,10}, modelHair.back_hair)
+    swinging_physics.swingOnHead(modelHair.back_hair.back_hair_3, 180, {-30, 5, -2.5,2.5, -10,10}, modelHair.back_hair)
+
+    swinging_physics.swingOnHead(modelHair.back_hair.back_hair_2.back_hair_22, 180, {-15,7.5, -5,5, -10,10}, modelHair.back_hair.back_hair_2)
+    swinging_physics.swingOnHead(modelHair.back_hair.back_hair_2.back_hair_22.back_hair_222, 180, {0,10, -7.5,7.5, -10,10}, modelHair.back_hair.back_hair_2.back_hair_22)
+    swinging_physics.swingOnHead(modelHair.back_hair.back_hair_3.back_hair_33, 180, {-15,7.5, -5,5, -10,10}, modelHair.back_hair.back_hair_3)
+    swinging_physics.swingOnHead(modelHair.back_hair.back_hair_3.back_hair_33.back_hair_333, 180, {0,10, -7.5,7.5, -10,10}, modelHair.back_hair.back_hair_3.back_hair_33)
 end
