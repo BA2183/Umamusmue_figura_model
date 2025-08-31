@@ -45,6 +45,11 @@ function events.entity_init()
 
     --Ears physic
     squapi.ear:new(modelHead.ear_l_1, modelHead.ear_r_1, 0.25, nil, nil, false, nil, nil, nil)
+    swinging_physics.swingOnHead(modelHead.ear_r_1.charm_1, -90, {-25,25, -25,25, -25,25}, modelHead.ear_r_1)
+    swinging_physics.swingOnHead(modelHead.ear_r_1.charm_1.charm_2, -90, {-25,25, -25,25, -25,25}, modelHead.ear_l_1.charm_1)
+
+    swinging_physics.swingOnHead(modelHead.ear_r_1.charm_3, -90, {-45,45, 0,0, 0,0}, modelHead.ear_r_1)
+    swinging_physics.swingOnHead(modelHead.ear_r_1.charm_3.charm_4, -90, {-45,45, 0,0, 0,0}, modelHead.ear_r_1.charm_3)
 
     --Tail physic
     modelBody =  root.torso.Body
