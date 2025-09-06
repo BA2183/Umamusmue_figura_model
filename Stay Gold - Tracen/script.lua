@@ -45,11 +45,11 @@ function events.entity_init()
 
     --Ears physic
     squapi.ear:new(modelHead.ear_l_1, modelHead.ear_r_1, 0.25, nil, nil, false, nil, nil, nil)
-    swinging_physics.swingOnHead(modelHead.ear_r_1.charm_1, -90, {-25,25, -25,25, -25,25}, modelHead.ear_r_1)
-    swinging_physics.swingOnHead(modelHead.ear_r_1.charm_1.charm_2, -90, {-25,25, -25,25, -25,25}, modelHead.ear_l_1.charm_1)
+    swinging_physics.swingOnHead(modelHead.ear_r_1.ear_r_2.charm_1, -90, {-25,25, -25,25, -25,25}, modelHead.ear_r_1)
+    swinging_physics.swingOnHead(modelHead.ear_r_1.ear_r_2.charm_1.charm_2, -90, {-25,25, -25,25, -25,25}, modelHead.ear_l_1.charm_1)
 
-    swinging_physics.swingOnHead(modelHead.ear_r_1.charm_3, -90, {-45,45, 0,0, 0,0}, modelHead.ear_r_1)
-    swinging_physics.swingOnHead(modelHead.ear_r_1.charm_3.charm_4, -90, {-45,45, 0,0, 0,0}, modelHead.ear_r_1.charm_3)
+    swinging_physics.swingOnHead(modelHead.ear_r_1.ear_r_2.charm_3, -90, {-45,45, 0,0, 0,0}, modelHead.ear_r_1)
+    swinging_physics.swingOnHead(modelHead.ear_r_1.ear_r_2.charm_3.charm_4, -90, {-45,45, 0,0, 0,0}, modelHead.ear_r_1.charm_3)
 
     --Tail physic
     modelBody =  root.torso.Body
@@ -72,21 +72,22 @@ function events.entity_init()
     modelHairBack = modelHair.back_hair1
 
         --Front hair
-    swinging_physics.swingOnHead(modelHair.hair_front_mid, 0, {0,25, -2.5,2.5, -5,5})
-    swinging_physics.swingOnHead(modelHair.hair_front_left, 0, {0,5, -2.5,2.5, -5,5})
-    swinging_physics.swingOnHead(modelHair.hair_front_right, 0, {0,5, -2.5,2.5, -5,5})
+    swinging_physics.swingOnHead(modelHair.hair_front_mid, 0, {0,15, -2.5,2.5, -2.5,2.5})
+    swinging_physics.swingOnHead(modelHair.hair_front_left, 0, {0,5, -3,2, -5,2})
+    swinging_physics.swingOnHead(modelHair.hair_front_right, 0, {0,5, -2,3, -2,5})
+    swinging_physics.swingOnHead(modelHair.hair_front_mid.hair_front_mid_side, 0, {0,0, 0,0, -10,10})
 
         --right hair
-    swinging_physics.swingOnHead(modelHairRight.hair_right1, -90, {-2.5,2.5, 0,0, -2.5,5})
-    swinging_physics.swingOnHead(modelHairRight.hair_right2, -90, {-2.5,2.5, 0,0, -5,5})
-    swinging_physics.swingOnHead(modelHairRight.hair_right3, -90, {-2.5,2.5, 0,0, -2.5,5})
-    swinging_physics.swingOnHead(modelHairRight.hair_right4, -90, {-2.5,2.5, 0,0, 0,5})
+    swinging_physics.swingOnHead(modelHairRight.hair_right1, -90, {-2.5,2.5, 0,0, 0,2.5})
+    swinging_physics.swingOnHead(modelHairRight.hair_right2, -90, {-2.5,2.5, 0,0, 0,3})
+    swinging_physics.swingOnHead(modelHairRight.hair_right3, -90, {-2.5,2.5, 0,0, 0,2.5})
+    swinging_physics.swingOnHead(modelHairRight.hair_right4, -90, {-2.5,2.5, 0,0, 0,2})
 
         --left hair
-    swinging_physics.swingOnHead(modelHairLeft.hair_left1, 90, {-2.5,2.5, 0,0, -5,2.5})
-    swinging_physics.swingOnHead(modelHairLeft.hair_left2, 90, {-2.5,2.5, 0,0, -5,5})
-    swinging_physics.swingOnHead(modelHairLeft.hair_left3, 90, {-2.5,2.5, 0,0, -5,2.5})
-    swinging_physics.swingOnHead(modelHairLeft.hair_left4, 90, {-2.5,2.5, 0,0, -5,0})
+    swinging_physics.swingOnHead(modelHairLeft.hair_left1, 90, {-2.5,2.5, 0,0, -2.5,0})
+    swinging_physics.swingOnHead(modelHairLeft.hair_left2, 90, {-2.5,2.5, 0,0, -3,0})
+    swinging_physics.swingOnHead(modelHairLeft.hair_left3, 90, {-2.5,2.5, 0,0, -2.5,0})
+    swinging_physics.swingOnHead(modelHairLeft.hair_left4, 90, {-2.5,2.5, 0,0, -2,0})
 
         --back hair
     swinging_physics.swingOnHead(modelHairBack, -180, {-25,5, 0,0, -5,5})
