@@ -64,7 +64,7 @@ function events.entity_init()
     modelHair = root.torso.Neck.Head.hair
 
     -- front hair
-    swinging_physics.swingOnHead(modelHair.front_hair, 0, {0,45, -2.5,2.5, -2.5,2.5})
+    swinging_physics.swingOnHead(modelHair.front_hair, 0, {0,15, -2.5,2.5, -2.5,2.5})
     swinging_physics.swingOnHead(modelHair.hair_left, 90, {-2.5,2.5, 0,0, -10,0})
     swinging_physics.swingOnHead(modelHair.hair_right, -90, {-2.5,2.5, 0,0, 0, 10})
     swinging_physics.swingOnHead(modelHair.hair_left_front, 90, {-2.5,20, 0,0, -10,0})
