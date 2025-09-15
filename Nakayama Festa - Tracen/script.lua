@@ -50,7 +50,7 @@ function events.entity_init()
     modelBody =  root.torso.Body
 
     swinging_physics.swingOnBody(modelBody.tail1, 180, {-45,0, 0,0, -10,10})
-    swinging_physics.swingOnBody(modelBody.tail1.tail2, 180, {-25,5, 0,0, -10,10}, modelBody.tail1, 1)
+    swinging_physics.swingOnBody(modelBody.tail1.tail2, 180, {-25,5, 0,0, -10,10})
     swinging_physics.swingOnBody(modelBody.tail1.tail2.tail3, 180, {-15,19, 0,0, -10,10}, modelBody.tail1.tail2, 2)
 
     --Hairs Physics
