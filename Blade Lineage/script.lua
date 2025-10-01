@@ -44,7 +44,11 @@ function events.item_render(item, mode, pos, rot, scale, lefty)
         return models.model.ItemSheath
     end
 end
-
+function events.tick()
+    local hat = player:getItem(6):isArmor()
+    -- there's a ton of ways to detect for only helmets but isArmor is the funnest
+    models.model.root.Torso.Neck.Head.Hat:setVisible(hat)
+end
 -- Auto generated script file --
 
 --hide vanilla model
