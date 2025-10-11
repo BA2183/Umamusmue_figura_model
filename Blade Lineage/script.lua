@@ -8,6 +8,12 @@ local swinging_physics = require("swinging_physics")
 local root = models.model.root
 --local modelHead = root.torso.Neck.Head
 
+function events.tick()
+    local sleeping = player:getPose() == "SLEEPING"
+
+    animations.model.Sleep:setPlaying(sleeping)
+end
+
 function events.entity_init()
     -- root.Torso.Body.coat_left:setParentType("Cape")
     -- root.Torso.Body.coat_right:setParentType("Cape")
@@ -19,6 +25,16 @@ function events.entity_init()
         root.Torso.Neck,
         root.Torso.Neck.Head
     }, 0.5, 0.1, 1, true)
+
+    --Eyes
+    modelHead = root.Torso.Neck.Head
+    modelEyes = modelHead.Eyes
+
+    --Blinking
+    squapi.randimation:new(animations.model.Blinking, 100, true )
+    
+    squapi.eye:new( modelEyes.Eye_left, 0.25, 0.50, 0.50, 0.50 )
+    squapi.eye:new( modelEyes.Eye_right, 0.50, 0.25, 0.50, 0.50 )
     
     --coat physics
     swinging_physics.swingOnBody(root.Torso.Body.coat_left, 45, {-75,0, -10,0, -10,0})
