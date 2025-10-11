@@ -93,22 +93,22 @@ function events.entity_init()
     hair_47 = hair_34.hair47
     hair_48 = hair_34.hair48
 
-    swinging_physics.swingOnBody(hair_1, 90, {-25,0 ,0,0, 0,0})
+    swinging_physics.swingOnHead(hair_1, 90, {-25,0 ,0,0, 0,0})
 
-    swinging_physics.swingOnBody(hair_21, 180, {-25,0 ,0,0, -10,10}, hair_1)
-    swinging_physics.swingOnBody(hair_22, 180, {-25,0 ,0,0, -10,10}, hair_1)
+    swinging_physics.swingOnHead(hair_21, 180, {-25,0 ,0,0, -10,10}, hair_1)
+    swinging_physics.swingOnHead(hair_22, 180, {-25,0 ,0,0, -10,10}, hair_1)
 
-    swinging_physics.swingOnBody(hair_31, 180, {-25,5 ,0,0, -15,15}, hair_21)
-    swinging_physics.swingOnBody(hair_32, 180, {-25,5 ,0,0, -15,15}, hair_21)
-    swinging_physics.swingOnBody(hair_33, 180, {-25,5 ,0,0, -15,15}, hair_22)
-    swinging_physics.swingOnBody(hair_34, 180, {-25,5 ,0,0, -15,15}, hair_22)
+    swinging_physics.swingOnHead(hair_31, 180, {-25,5 ,0,0, -15,15}, hair_21)
+    swinging_physics.swingOnHead(hair_32, 180, {-25,5 ,0,0, -15,15}, hair_21)
+    swinging_physics.swingOnHead(hair_33, 180, {-25,5 ,0,0, -15,15}, hair_22)
+    swinging_physics.swingOnHead(hair_34, 180, {-25,5 ,0,0, -15,15}, hair_22)
 
-    swinging_physics.swingOnBody(hair_41, 180, {-25,5 ,0,0, -25,25}, hair_31)
-    swinging_physics.swingOnBody(hair_42, 180, {-25,5 ,0,0, -25,25}, hair_31)
-    swinging_physics.swingOnBody(hair_43, 180, {-25,5 ,0,0, -25,25}, hair_32)
-    swinging_physics.swingOnBody(hair_44, 180, {-25,5 ,0,0, -25,25}, hair_32)
-    swinging_physics.swingOnBody(hair_45, 180, {-25,5 ,0,0, -25,25}, hair_33)
-    swinging_physics.swingOnBody(hair_46, 180, {-25,5 ,0,0, -25,25}, hair_33)
-    swinging_physics.swingOnBody(hair_47, 180, {-25,5 ,0,0, -25,25}, hair_34)
-    swinging_physics.swingOnBody(hair_48, 180, {-25,5 ,0,0, -25,25}, hair_34)
+    swinging_physics.swingOnHead(hair_41, 180, {-25,5 ,0,0, -25,25}, hair_31)
+    swinging_physics.swingOnHead(hair_42, 180, {-25,5 ,0,0, -25,25}, hair_31)
+    swinging_physics.swingOnHead(hair_43, 180, {-25,5 ,0,0, -25,25}, hair_32)
+    swinging_physics.swingOnHead(hair_44, 180, {-25,5 ,0,0, -25,25}, hair_32)
+    swinging_physics.swingOnHead(hair_45, 180, {-25,5 ,0,0, -25,25}, hair_33)
+    swinging_physics.swingOnHead(hair_46, 180, {-25,5 ,0,0, -25,25}, hair_33)
+    swinging_physics.swingOnHead(hair_47, 180, {-25,5 ,0,0, -25,25}, hair_34)
+    swinging_physics.swingOnHead(hair_48, 180, {-25,5 ,0,0, -25,25}, hair_34)
 end
